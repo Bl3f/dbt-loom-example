@@ -12,6 +12,10 @@ In order to have the example working you need a few steps.
     ```
     pip install dbt-duckdb==1.6.1
     ```
+* Install dbt-loom — for the example we only use one virtualenv for both project, but in real life it will be different.
+    ```bash
+    pip install dbt-loom
+    ```
 * First you need to run the dbt core project, as the link between the 2 project is for the moment done by reading the local manifest.
     ```bash
     cd core
