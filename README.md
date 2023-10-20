@@ -24,3 +24,19 @@ In order to have the example working you need a few steps.
     dbt build
     ```
 * You're done.
+* You should be able to see the table you have created with DuckDB. Run `show tables;`.
+    ```bash
+    duckdb ../warehouse.duckdb
+    D show tables;
+    ┌─────────────┐
+    │    name     │
+    │   varchar   │
+    ├─────────────┤
+    │ margins     │
+    │ orders      │
+    │ raw_orders  │
+    │ revenue     │
+    │ stg_orders  │
+    │ stg_revenue │
+    └─────────────┘
+    ```
