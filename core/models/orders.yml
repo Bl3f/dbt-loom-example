@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: orders
+    access: public
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: order_id
+        data_type: int
+        constraints:
+          - type: not_null
+      - name: order_date
+        data_type: date
+      - name: customer_id
+        data_type: string
+        constraints:
+          - type: not_null
+      - name: amount_incl_vat
+        data_type: numeric(8,2)
+      - name: amount_excl_vat
+        data_type: numeric(8,2)
